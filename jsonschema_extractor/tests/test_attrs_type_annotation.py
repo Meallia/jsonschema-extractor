@@ -15,7 +15,7 @@ class Example_implicit(object):
     optional : Optional[str]  = attr.ib()
     string : str = attr.ib(default="foo")
 
-@pytest.mark.parametrized("example_class", [Example_explicit, Example_implicit])
+@pytest.mark.parametrize("example_class", [Example_explicit, Example_implicit])
 def test_extract_cattrs(extractor, example_class):
     assert extractor.extract(example_class) == {
         "type": "object",
