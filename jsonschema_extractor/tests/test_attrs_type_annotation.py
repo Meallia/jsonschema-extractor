@@ -1,5 +1,6 @@
 import attr
 from typing import Optional
+import pytest
 
 
 @attr.s
